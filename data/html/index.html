@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>YLMF OS Installer</title>
+<link href="images/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body   ondragstart='return false'
+        onselectstart ='return false'
+        onselect='return document.selection.empty()'>
+<DIV id="main">
+<DIV id="Box1"><img src="images/pic1.jpg" /></DIV>
+<DIV id="Box2">
+      <UL id=imgbox class=imgbox>
+         <LI id="Con1" style="display:block;"><IMG src="images/pic3-1.jpg"></LI>
+         <LI id="Con2"><IMG src="images/pic3-2.jpg"></LI>
+         <LI id="Con3"><IMG src="images/pic3-3.jpg"></LI>
+         <LI id="Con4"><IMG src="images/pic3-4.jpg"></LI>
+         <LI id="Con5"><IMG src="images/pic3-5.jpg"></LI>
+      </UL>
+           <!--小框架的按钮-->            
+     <UL id=numBox class=numBox>
+         <LI id="btn1" class="current"></LI>
+         <LI id="btn2" class=""></LI>
+         <LI id="btn3" class=""></LI>
+         <LI id="btn4" class=""></LI>
+         <LI id="btn5" class=""></LI> 
+      </UL>
+</DIV>
+<DIV id="Box3"><img src="images/done.jpg" /></DIV>
+<DIV id="Box4"><img src="images/thanks.jpg" /></DIV>
+</DIV>
+<div id="test">
+</div>
+<script>
+var i=1;
+var btnName="btn";
+var warpName="Con";
+var len=5;
+var i_t;
+var pics_prog = 0.97;
+
+var $$ = function(id){return typeof id=="string"?document.getElementById(id):id}
+
+/*切换函数*/
+function tab(i){
+	for(var j = 1;j<=len;j++){
+		$$(btnName+j).className="";
+		$$(warpName+j).style.display="none";
+	}
+///    $$('test').innerHTML=i;
+	$$(btnName+i).className="current";
+	$$(warpName+i).style.display = "block";
+}
+
+/*绑定按钮函数*/
+function go(){
+	for(var j=1;j<=len;j++){
+		$$(btnName+j).onclick = (function(k){
+			return function(){window.clearInterval(i_t);tab(k);window.i=k;autoPlay();}
+		})(j)
+	}
+}
+go();
+
+/*自动播放*/
+function autoPlay(){
+	i_t = window.setInterval(function(){if(i<1 || i>=6){i=1};tab(i);i++},1000);
+}
+
+/*首页切换*/
+var s_t = window.setTimeout(function(){
+	$$("Box1").style.display="none";
+	$$("Box2").style.display="block";
+	autoPlay();
+	},2000);
+
+try
+{
+    jsi = JSOSInstaller
+}catch(err)
+{
+    function JSI()
+    {
+        this.progress = -0.1;
+        this.donefunc = null
+        this.changedfunc = null
+    }
+
+    JSI.prototype.SetProgressChangedFunc = function(arg1)
+    {
+        this.changedfunc = arg1
+    }
+
+    JSI.prototype.SetDoneHookFunc = function(arg1)
+    {
+        this.donefunc = arg1
+    }
+
+    JSI.prototype.changingfunc = function()
+    {
+        this.progress = this.progress+0.05;
+        if(this.progress < 1.0)
+        {
+            if(this.changedfunc != null)
+            {
+                this.changedfunc()
+            }
+            setTimeout('jsi.changingfunc()',1000)
+        }else if(this.donefunc != null){
+            this.donefunc()
+        }
+    }
+
+    jsi = new JSI()
+    jsi.changingfunc()
+}
+
+/*检查是否即将安装完成*/
+function chk_done(){
+var installer_p = jsi.progress;
+	if(installer_p>=0.9){
+		$$("Box2").style.display="none";
+		$$("Box3").style.display="block";
+	}
+}
+
+jsi.SetProgressChangedFunc(chk_done);
+
+/*安装完成要执行的函数*/
+function installDone(){
+	$$("Box3").style.display="none";
+	$$("Box4").style.display="block";
+}
+
+jsi.SetDoneHookFunc(installDone)
+</script>
+</body>
+</html>

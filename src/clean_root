@@ -1,0 +1,10 @@
+#!/bin/bash
+
+test -n "$TARGETDIR" || exit 1
+test -d "$TARGETDIR" || exit 2
+
+mountpoint "$TARGETDIR" &>/dev/null || exit 3
+
+cd "$TARGETDIR"
+### how to deal with mountpoint in "$TARGETDIR" ??
+

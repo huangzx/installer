@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#exit code must be 0 OR installation will be abort
+#this will called after target mount point mounted
+#but not copy files
+#echo "$TARGETDIR $(date)" >>/tmp/pre_install.log
+
+if test "$USEWUBI" == "1";then
+    mkdir -p "$TARGETDIR/host"
+fi
+
+#for systemd.
+if ps -C systemd >/dev/null; then
+	mkdir -p "$TARGETDIR/isodevice"
+	mount --bind /isodevice "$TARGETDIR/isodevice"
+fi
+
+exit 0

@@ -1,0 +1,59 @@
+#!/bin/bash
+
+partition="$1"
+type="$2"
+
+dir='/var/run/osprober/.mounted'
+
+mkdir -p $dir
+umount -l "$dir" 2>/dev/null
+
+get_mount_dir()
+{
+   mount|grep "^$1[ \t]"|while read  d o mp
+   do
+   if test -e $d;then
+        echo $mp |awk -F' type' '{print $1}'
+        break
+   fi
+   done
+}
+
+
+###这个只适应此脚本的情况,挂载点路径无空格
+###为何不用mountpoint,挂载后立即使用mountpoint,判断结果往往不正确
+is_mountpoint()
+{
+r=$(readlink -f $1)
+awk '{print $2}' /proc/mounts |while read ch
+do
+    if test "x$ch" = "x$r";then
+        echo "yes"
+        break
+    fi
+done
+}
+
+mdir=$(get_mount_dir "$partition")
+if test -n "$mdir" && test -d "$mdir" ;then
+    mount  --bind $mdir $dir &>/dev/null
+else
+    mount $partition $dir -o ro,nosuid,noexec &>/dev/null
+fi
+
+test "x$(is_mountpoint $dir)" = "xyes" || exit 1
+
+rs=1
+test -x  /usr/lib/os-probes/mounted/20microsoft || exit 2
+rm -f /var/lib/os-prober/labels
+for f in /usr/lib/os-probes/mounted/*
+do
+    output=$($f $partition $dir $type)
+    if test "x$?" = "x0" && test -n "$output" ;then
+        echo $output
+    rs=0
+    break
+    fi
+done
+umount -l $dir
+exit $rs

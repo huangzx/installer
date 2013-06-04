@@ -1,0 +1,1234 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-27 17:00+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/account_ui.glade.h:1
+msgid "Username:"
+msgstr "用戶名:"
+
+#: ../data/account_ui.glade.h:2
+msgid "Hostname:"
+msgstr "電腦名:"
+
+#: ../data/account_ui.glade.h:3
+msgid "<b>Username/hostname</b>"
+msgstr "<b>用戶名/電腦名</b>"
+
+#: ../data/account_ui.glade.h:4
+msgid "Password:"
+msgstr "密碼:"
+
+#: ../data/account_ui.glade.h:5
+msgid "Confirm:"
+msgstr "確認:"
+
+#: ../data/account_ui.glade.h:6
+msgid "<b>Password</b>"
+msgstr "<b>創建密碼</b>"
+
+#: ../data/account_ui.glade.h:7 ../data/installer_ui.glade.h:14
+msgid "Login automatically"
+msgstr "自動登錄"
+
+#: ../data/account_ui.glade.h:8 ../data/installer_ui.glade.h:15
+msgid "Require password to login"
+msgstr "使用密碼登錄"
+
+#: ../data/account_ui.glade.h:9
+msgid "<b>Login method</b>"
+msgstr "<b>登錄方式</b>"
+
+#: ../data/installer_ui.glade.h:1
+msgid "Copying errors"
+msgstr "複製檔失敗了"
+
+#: ../data/installer_ui.glade.h:2
+msgid "<b>Copying error</b>"
+msgstr "<b>檔複製錯誤</b>"
+
+#: ../data/installer_ui.glade.h:3
+msgid "_Abort"
+msgstr "中斷(_A)"
+
+#: ../data/installer_ui.glade.h:4
+msgid "_Skip"
+msgstr "跳過(_S)"
+
+#: ../data/installer_ui.glade.h:5
+msgid "_Retry"
+msgstr "重試(_R)"
+
+#: ../data/installer_ui.glade.h:6
+msgid "Installation failed"
+msgstr "安裝失敗"
+
+#: ../data/installer_ui.glade.h:7
+msgid "<b>Installation failed !</b>"
+msgstr "<b>安裝失敗!</b>"
+
+#: ../data/installer_ui.glade.h:8
+msgid "This installation will be abort !"
+msgstr "安裝進程將中斷 !"
+
+#: ../data/installer_ui.glade.h:9
+msgid "Eorror details"
+msgstr "詳細錯誤資訊"
+
+#: ../data/installer_ui.glade.h:10
+#, fuzzy
+msgid "Username"
+msgstr "用戶名:"
+
+#: ../data/installer_ui.glade.h:11
+#, fuzzy
+msgid "Hostname"
+msgstr "電腦名:"
+
+#: ../data/installer_ui.glade.h:12
+msgid "Password"
+msgstr "密碼"
+
+#: ../data/installer_ui.glade.h:13
+#, fuzzy
+msgid "Confirm"
+msgstr "確認:"
+
+#: ../data/installer_ui.glade.h:16
+#, fuzzy
+msgid "Language"
+msgstr "語言:"
+
+#: ../data/installer_ui.glade.h:17 ../data/localetzone_ui.glade.h:2
+msgid "Time Zone:"
+msgstr "時區:"
+
+#: ../data/installer_ui.glade.h:18
+#, fuzzy
+msgid "Keyboard:"
+msgstr "鍵盤佈局:"
+
+#: ../data/installer_ui.glade.h:19
+msgid "Cancel"
+msgstr "取消"
+
+#: ../data/installer_ui.glade.h:20
+msgid "_Install"
+msgstr "安裝(_I)"
+
+#: ../data/installer_ui.glade.h:21
+msgid "Umount failed"
+msgstr "卸載失敗"
+
+#: ../data/installer_ui.glade.h:22
+msgid "<b>Umount filesystem failed</b>"
+msgstr "<b>卸載檔系統失敗了</b>"
+
+#: ../data/installer_ui.glade.h:23
+msgid "Please shutdown applications,then retry !"
+msgstr "請關閉所有程式後,重試!"
+
+#: ../data/installer_ui.glade.h:24
+msgid "_Ignore"
+msgstr "忽略(_I)"
+
+#: ../data/localetzone_ui.glade.h:1
+msgid "Language:"
+msgstr "語言:"
+
+#: ../data/localetzone_ui.glade.h:3
+msgid "Keyboard layout:"
+msgstr "鍵盤佈局:"
+
+#: ../data/osinstaller.desktop.in.in.h:1
+#, fuzzy
+msgid "StartOS Installer"
+msgstr "YlmfOS 安裝工具"
+
+#: ../data/osinstaller.desktop.in.in.h:2
+#, fuzzy
+msgid "Installer for installing StartOS"
+msgstr "Ylmf OS 安裝工具"
+
+#: ../data/parted_man.glade.h:1
+msgid "Advance"
+msgstr "高級"
+
+#: ../data/parted_man.glade.h:2
+#, fuzzy
+msgid "Install bootloader"
+msgstr "安裝引導工具到MBR"
+
+#: ../data/parted_man.glade.h:3
+msgid "Device for bootloader:"
+msgstr "引導設備:"
+
+#: ../data/parted_man.glade.h:4
+msgid "Install bootloader to \"/\" partition"
+msgstr "安裝引導工具到根分區"
+
+#: ../data/parted_man.glade.h:5
+msgid "<b>Bootloader</b>"
+msgstr "<b>系統引導工具</b>"
+
+#: ../data/parted_man.glade.h:6
+msgid "Use quickly installing mode"
+msgstr "使用快速安裝模式"
+
+#: ../data/parted_man.glade.h:7
+msgid ""
+"Notice: <span color=\"red\" >Quickly installing mode request more cpu and "
+"memory resources !</span>"
+msgstr ""
+"注意: <span color=\"red\" >快速安裝會消耗更多的CPU和記憶體等資源.</span>"
+
+#: ../data/parted_man.glade.h:8
+msgid "<b>Installation options</b>"
+msgstr "<b>安裝選項</b>"
+
+#: ../data/parted_man.glade.h:9 ../src/partmod.py:1794
+msgid "Add"
+msgstr "添加"
+
+#: ../data/parted_man.glade.h:10
+msgid "<b><big>Change a partition</big></b>"
+msgstr "<b><big>修改硬碟分區</big></b>"
+
+#: ../data/parted_man.glade.h:11
+msgid "<b>Partition type:</b>"
+msgstr "<b>分區類型:</b>"
+
+#: ../data/parted_man.glade.h:12
+msgid "<b>Format partition:</b>"
+msgstr "<b>格式化:</b>"
+
+#: ../data/parted_man.glade.h:13
+msgid "<b>Filesystem type:</b>"
+msgstr "<b>檔系統:</b>"
+
+#: ../data/parted_man.glade.h:14
+msgid "<b>Partition size(MB):</b>"
+msgstr "<b>分區大小(MB):</b>"
+
+#: ../data/parted_man.glade.h:15
+msgid "<b>Partition label:</b>"
+msgstr "<b>分區標籤:</b>"
+
+#: ../data/parted_man.glade.h:16
+msgid "<b>mountpoint:</b>"
+msgstr "<b>掛載點:</b>"
+
+#: ../data/parted_man.glade.h:17
+#, fuzzy
+msgid "Select disk"
+msgstr "選擇硬碟:"
+
+#: ../data/parted_man.glade.h:18
+msgid ":"
+msgstr ""
+
+#: ../data/parted_man.glade.h:19
+#, fuzzy
+msgid "Automatically"
+msgstr "自動登錄"
+
+#: ../data/parted_man.glade.h:20
+msgid "Specify partition manually"
+msgstr "手動設置分區"
+
+#. name
+#. STOCK ID
+#: ../data/parted_man.glade.h:21 ../src/partmod.py:1162
+msgid "Change"
+msgstr "修改"
+
+#: ../data/parted_man.glade.h:22
+msgid "_Advance"
+msgstr "高級(_A)"
+
+#: ../data/parted_man.glade.h:23
+msgid "             "
+msgstr "             "
+
+#: ../data/parted_man.glade.h:24
+msgid "Configure mountpoint"
+msgstr "設置掛載點"
+
+#: ../data/parted_man.glade.h:25
+msgid "mountpoint:"
+msgstr "掛載點:"
+
+#: ../src/accountmod.py:82
+#, python-format
+msgid "\"%s\" has been used as a system user"
+msgstr "\"%s\" 已被系統使用,請使用別的用戶名"
+
+#: ../src/accountmod.py:85
+#, python-format
+msgid "username can't contain \"%s\""
+msgstr "用戶名不能包\"%s\""
+
+#: ../src/accountmod.py:163
+msgid "Configuring login method"
+msgstr "設置登錄方式"
+
+#: ../src/accountmod.py:182
+#, python-format
+msgid "Adding user <b>%s</b> ..."
+msgstr "正在添加用戶<b>%s</b> ..."
+
+#: ../src/accountmod.py:190
+#, python-format
+msgid "User <b>%s</b> added"
+msgstr "用戶<b>%s</b>已添加完畢"
+
+#: ../src/accountmod.py:211
+#, python-format
+msgid "Configure password for <b>%s</b>"
+msgstr "給<b>%s</b>設置密碼"
+
+#: ../src/accountmod.py:219
+#, python-format
+msgid "Configure encrypted password for <b>%s</b>"
+msgstr "給<b>%s</b>設置密碼"
+
+#: ../src/accountmod.py:228
+#, python-format
+msgid "Password for <b>%s</b> done"
+msgstr "<b>%s</b>的密碼設置完畢"
+
+#: ../src/accountmod.py:231
+#, python-format
+msgid "Configuring <b>%s</b> as sudoer"
+msgstr "設置<b>%s</b>為sudoer"
+
+#: ../src/accountmod.py:241
+#, python-format
+msgid "<b>%s</b> is sudoer"
+msgstr "<b>%s</b>現在已是sudoer"
+
+#: ../src/accountmod.py:246
+#, python-format
+msgid "Configuring <b>%s</b> as member of group \"%s\""
+msgstr "把<b>%s</b>加入用戶組\"%s\""
+
+#: ../src/accountmod.py:253
+msgid "User configuration is done"
+msgstr "用戶配置完成"
+
+#: ../src/accountmod.py:258
+msgid "Configuring hostname"
+msgstr "設置電腦名 ..."
+
+#: ../src/accountmod.py:273
+msgid "Hostname done"
+msgstr "電腦名設置完成"
+
+#: ../src/accountmod.py:379
+msgid "Your username"
+msgstr "用戶名"
+
+#: ../src/accountmod.py:380
+msgid "Your hostname"
+msgstr "電腦名"
+
+#: ../src/accountmod.py:382
+msgid "Your passowrd"
+msgstr "密碼"
+
+#: ../src/accountmod.py:383
+msgid "Confirm password"
+msgstr "確認密碼"
+
+#: ../src/accountmod.py:424 ../src/accountmod.py:482
+msgid "Confirm failed"
+msgstr "兩次輸入的密碼不一致!"
+
+#: ../src/accountmod.py:476
+msgid "Password is emtry"
+msgstr "密碼不能為空!"
+
+#: ../src/copyfilemod.py:135
+#, python-format
+msgid "Failed to copy \"%s\""
+msgstr "複製檔\"%s\"失敗"
+
+#: ../src/copyfilemod.py:223 ../src/copyfilemod.py:262
+#, python-format
+msgid "Copying %s ..."
+msgstr "正在複製檔 %s ..."
+
+#: ../src/copyfilemod.py:284
+#, fuzzy
+msgid "Cleaning files ..."
+msgstr "正在卸載檔系統 ..."
+
+#: ../src/copyfilemod.py:302
+#, fuzzy
+msgid "Cleaning done"
+msgstr "完成檔系統卸載任務."
+
+#: ../src/copyfilemod.py:348
+#, fuzzy
+msgid "Installing files"
+msgstr "安裝失敗"
+
+#: ../src/copyfilemod.py:366
+#, python-format
+msgid "Process \"unsquashfs\" terminated by signal %d"
+msgstr "進程\"unsquashfs\" 被信號%d終止"
+
+#: ../src/copyfilemod.py:459
+msgid "Preparing for copying ..."
+msgstr "開始複製檔 ..."
+
+#: ../src/installscript.py:56 ../src/installscript.py:77
+#, python-format
+msgid "Umount \"%s\" on \"%s\" failed,error code:%d\n"
+msgstr "卸載\"%s\"(%s)失敗,錯誤碼:%d\n"
+
+#: ../src/installscript.py:67 ../src/installscript.py:91
+msgid "Abort Installation !"
+msgstr "安裝中斷 !"
+
+#: ../src/installscript.py:97
+msgid "Mounting targets ..."
+msgstr "掛載目標分區 ..."
+
+#: ../src/installscript.py:99
+msgid "Targets mounted"
+msgstr "目標分區已掛載"
+
+#: ../src/installscript.py:101
+msgid "Running preinstall script ..."
+msgstr "正在運行安裝前腳本 ..."
+
+#: ../src/installscript.py:105
+msgid "Preinstall done"
+msgstr "安裝前腳本運行結束"
+
+#: ../src/installscript.py:108
+msgid "Mounting procfs ..."
+msgstr "掛載proc檔系統 ..."
+
+#: ../src/installscript.py:110
+msgid "Procfs mounted"
+msgstr "proc檔系統已掛載"
+
+#: ../src/installscript.py:116
+msgid "Writing /etc/fstab ..."
+msgstr "寫入/etc/fstab ..."
+
+#: ../src/installscript.py:119
+msgid "/etc/fstab Written"
+msgstr "/etc/fstab 已刷新"
+
+#: ../src/installscript.py:128
+msgid "Bootloader installed"
+msgstr "啟動引導工具已安裝"
+
+#: ../src/installscript.py:130
+msgid "Installing grub bootloader ..."
+msgstr "正在安裝grub啟動引導工具 ..."
+
+#: ../src/installscript.py:133
+msgid "Bootloader is not installed"
+msgstr "啟動引導工具未安裝"
+
+#: ../src/installscript.py:137
+msgid "Running postinstall script ..."
+msgstr "正在運行安裝後腳本 ..."
+
+#: ../src/installscript.py:142
+msgid "Postinstall done"
+msgstr "安裝後腳本運行結束"
+
+#: ../src/installscript.py:206
+msgid "Umounting filesystems ..."
+msgstr "正在卸載檔系統 ..."
+
+#: ../src/installscript.py:207
+msgid "Deactive swaps ..."
+msgstr "正在禁用交換分區 ..."
+
+#: ../src/installscript.py:209
+msgid "swapoff done."
+msgstr "完成禁用交換分區."
+
+#: ../src/installscript.py:210
+msgid "Umounting ..."
+msgstr "正在卸載 ..."
+
+#: ../src/installscript.py:212
+msgid "Umounting done."
+msgstr "完成檔系統卸載任務."
+
+#: ../src/localetzonemap.py:41 ../src/osdata.py:34
+msgid "China(Chongqing,Shanghai,Beijing)"
+msgstr "中國(重慶,上海,北京)"
+
+#: ../src/localetzonemap.py:42 ../src/osdata.py:35
+msgid "China(Taibei)"
+msgstr "中國(臺北)"
+
+#: ../src/localetzonemap.py:43 ../src/osdata.py:36
+msgid "China(xianggang)"
+msgstr "中國(香港)"
+
+#: ../src/localetzonemap.py:44 ../src/osdata.py:37
+msgid "United States (Tell City, Indiana)"
+msgstr ""
+
+#: ../src/localetzonemap.py:45 ../src/osdata.py:38
+msgid "United States (Phoenix)"
+msgstr ""
+
+#: ../src/localetzonemod.py:302
+msgid "Configuring locales ..."
+msgstr "配置系統默認語言 ..."
+
+#: ../src/localetzonemod.py:303
+msgid "Configuring timezone..."
+msgstr "配置系統時區 ..."
+
+#: ../src/localetzonemod.py:304
+msgid "Configuring console ..."
+msgstr "配置系統控制臺 ..."
+
+#: ../src/mainframemod.py:222
+msgid "_Quit"
+msgstr "稍後重啟(_Q)"
+
+#: ../src/mainframemod.py:256
+#, fuzzy
+msgid "Almost finished"
+msgstr "安裝失敗"
+
+#: ../src/mainframemod.py:298
+#, fuzzy
+msgid "Installation finished"
+msgstr "安裝失敗"
+
+#: ../src/mainframemod.py:300
+msgid ""
+"StartOS is ready now\n"
+"Please restart and use it!"
+msgstr ""
+
+#: ../src/mainframemod.py:306
+msgid "<b>Installation failed .</b>"
+msgstr "<b>安裝失敗 .</b>"
+
+#: ../src/mainframemod.py:500
+msgid "Cancel ?"
+msgstr "取消?"
+
+#: ../src/mainframemod.py:500
+msgid "Are you sure to cancel this installation ?"
+msgstr "你確定需要取消安裝麼?"
+
+#: ../src/mainframemod.py:532
+msgid "Cancel Installation ?"
+msgstr "退出安裝 ?"
+
+#: ../src/mainframemod.py:532
+msgid "The program will quit."
+msgstr "退出安裝程式."
+
+#: ../src/mainframemod.py:544
+msgid "username is empty"
+msgstr "用戶名不能為空"
+
+#: ../src/mainframemod.py:548
+msgid "hostname is empty"
+msgstr "電腦名不能為空"
+
+#: ../src/mainframemod.py:552
+msgid "password is empty"
+msgstr "密碼不能為空!"
+
+#: ../src/mainframemod.py:556
+msgid "Confirm failed!"
+msgstr "兩次輸入的密碼不一致!"
+
+#: ../src/mainframemod.py:563
+msgid "Please configure \"/\" mountpoint"
+msgstr "請選擇一個分區並設置掛載點為\"/\""
+
+#: ../src/mainframemod.py:569 ../src/mainframemod.py:571
+msgid "LOST of DATA"
+msgstr ""
+
+#: ../src/mainframemod.py:569
+#, python-format
+msgid "Any partition(s) and file(s) on the disk '%s' will be deleted"
+msgstr ""
+
+#: ../src/mainframemod.py:571
+#, python-format
+msgid "Files on partition '%s' will be deleted"
+msgstr ""
+
+#: ../src/mainframemod.py:573
+#, fuzzy
+msgid "No automatically option"
+msgstr "自動登錄"
+
+#: ../src/mainframemod.py:657
+#, fuzzy
+msgid "Wellcome to StartOS"
+msgstr "歡迎使用 Ylmf OS"
+
+#. self.uiframe.progress_label.set_markup(_("Complete"))
+#: ../src/mainframemod.py:1100
+msgid "_Reboot"
+msgstr "立即重啟(_R)"
+
+#: ../src/mainframemod.py:1126
+msgid "Busying"
+msgstr "繁忙中"
+
+#: ../src/mainframemod.py:1126
+msgid "Program is busying !"
+msgstr "程式繁忙中!"
+
+#: ../src/mainframemod.py:1128
+msgid "Exit"
+msgstr "退出"
+
+#: ../src/mainframemod.py:1128
+msgid "Are you sure to exit ?"
+msgstr "你確定要退出麼?"
+
+#: ../src/misc.py:48
+msgid "<b>Error</b>"
+msgstr "<b>錯誤</b>"
+
+#: ../src/misc.py:986
+#, fuzzy
+msgid "Must set mountpoint '/'"
+msgstr "設置掛載點"
+
+#: ../src/misc.py:1160
+#, python-format
+msgid ""
+"Installer set:\n"
+"   Username=%s\n"
+"   Password=%s"
+msgstr ""
+"安裝工具將自動設置如下:\n"
+"    用戶名 :%s\n"
+"    密碼   :%s"
+
+#: ../src/misc.py:1161
+msgid "Can't get preseed.cfg"
+msgstr "無法找到檔'preseed.cfg'"
+
+#: ../src/partmod.py:55
+#, fuzzy
+msgid "Recommended"
+msgstr "擴展分區"
+
+#: ../src/partmod.py:57
+#, fuzzy
+msgid "Swap filesystem"
+msgstr "檔系統"
+
+#: ../src/partmod.py:59 ../src/partmod.py:1465
+#, fuzzy
+msgid "EFI system"
+msgstr "檔系統:"
+
+#: ../src/partmod.py:107
+msgid "Where system will be"
+msgstr "系統將安裝於此"
+
+#: ../src/partmod.py:108
+msgid "For user data"
+msgstr "如果設置,用戶數據保存於此"
+
+#: ../src/partmod.py:115
+msgid "Don't configure mountpoint"
+msgstr "不設掛載點"
+
+#: ../src/partmod.py:274
+#, python-format
+msgid "Found partition table errors on \"%s\""
+msgstr "磁片\"%s\"分區表錯誤"
+
+#: ../src/partmod.py:508
+#, python-format
+msgid ""
+"Device is too small.\n"
+"    The \"<b>/</b>\" device must be more than %sB."
+msgstr ""
+"設備空間太小.\n"
+"\"<b>/</b>\" 分區的空間必須大於 %sB."
+
+#: ../src/partmod.py:511
+#, python-format
+msgid ""
+"Device is too small.\n"
+"    Device must be more than %sB."
+msgstr ""
+"設備空間太小.\n"
+"請選擇空間大於%sB的設備."
+
+#: ../src/partmod.py:988
+#, python-format
+msgid "fsck error:%s,code:%d"
+msgstr ""
+
+#: ../src/partmod.py:999
+#, python-format
+msgid "resize test error:%s,code:%d"
+msgstr ""
+
+#: ../src/partmod.py:1006
+#, python-format
+msgid "resize error:%s,code:%d"
+msgstr ""
+
+#: ../src/partmod.py:1106
+#, python-format
+msgid "Please select a disk that is more than %sB."
+msgstr "請選擇一個空間大於%sB的硬碟."
+
+#. name
+#. STOCK ID
+#: ../src/partmod.py:1141
+msgid "configure mountpoint"
+msgstr "設置掛載點"
+
+#. label
+#. accelerator
+#: ../src/partmod.py:1143
+msgid "configure partittion's mountpoint"
+msgstr "修改分區掛載點"
+
+#. name
+#. STOCK ID
+#. label
+#. accelerator
+#: ../src/partmod.py:1150
+msgid "Add new partition"
+msgstr "添加新分區"
+
+#. name
+#. STOCK ID
+#. label
+#. accelerator
+#: ../src/partmod.py:1157
+msgid "Delete this partition"
+msgstr "刪除此分區"
+
+#. label
+#. accelerator
+#: ../src/partmod.py:1164
+msgid "change partittion configuration"
+msgstr "修正硬碟分區屬性"
+
+#: ../src/partmod.py:1300
+msgid "Partition"
+msgstr "分區"
+
+#: ../src/partmod.py:1307
+msgid "Filesystem"
+msgstr "檔系統"
+
+#: ../src/partmod.py:1314
+msgid "Mountpoint"
+msgstr "掛載點"
+
+#: ../src/partmod.py:1321
+msgid "Label"
+msgstr "標籤"
+
+#: ../src/partmod.py:1328
+msgid "Size"
+msgstr "大小"
+
+#: ../src/partmod.py:1335
+msgid "Format?"
+msgstr "格式化?"
+
+#: ../src/partmod.py:1390
+msgid "Get no disk ..."
+msgstr "未發現磁片 ..."
+
+#: ../src/partmod.py:1428 ../src/partmod.py:1445
+msgid "free space"
+msgstr "空閒空間"
+
+#: ../src/partmod.py:1442 ../src/partmod.py:1982
+#, python-format
+msgid "Double click to configure mountpoint for \"<b>%s</b>\""
+msgstr "雙擊設置\"<b>%s</b>\"的掛載點"
+
+#: ../src/partmod.py:1447 ../src/partmod.py:1984
+#, python-format
+msgid "Device '<b>%s</b>' is busy"
+msgstr "設備'<b>%s</b>'繁忙中!"
+
+#: ../src/partmod.py:1449
+#, python-format
+msgid "<b>%s</b> is <b>%s</b> filesystem can't mount for \"/\""
+msgstr "<b>%s</b>是<b>%s</b>檔系統,不能設掛載點為\"/\""
+
+#: ../src/partmod.py:1469
+msgid "bios_grub system"
+msgstr ""
+
+#: ../src/partmod.py:1620
+msgid "Primary"
+msgstr "主分區"
+
+#: ../src/partmod.py:1621
+msgid "Logical"
+msgstr "邏輯分區"
+
+#: ../src/partmod.py:1622
+msgid "Extended"
+msgstr "擴展分區"
+
+#: ../src/partmod.py:1625
+msgid "Normal"
+msgstr "正常"
+
+#: ../src/partmod.py:1753
+msgid "Don't use this partition"
+msgstr "不用此分區"
+
+#: ../src/partmod.py:1755
+#, fuzzy
+msgid "Unformated partition"
+msgstr "不格式化此分區"
+
+#: ../src/partmod.py:1795
+msgid ""
+"\n"
+"<b>Add a new partition</b>\n"
+msgstr ""
+"\n"
+"<b>添加新分區</b>\n"
+
+#: ../src/partmod.py:1797
+msgid "Edit"
+msgstr "編輯"
+
+#: ../src/partmod.py:1798
+msgid ""
+"\n"
+"<b>Edit a partition</b>\n"
+msgstr ""
+"\n"
+"<b>編輯硬碟分區</b>\n"
+
+#: ../src/partmod.py:1862
+msgid "Mountpoint must be startswith \"/\""
+msgstr "掛載點必須使用絕對路徑(以\"/\"開頭)"
+
+#: ../src/partmod.py:1877
+#, python-format
+msgid "Configure mountpoint for \"<b>%s</b>\""
+msgstr "設置\"<b>%s</b>\"的掛載點"
+
+#: ../src/partmod.py:1960
+#, fuzzy
+msgid "Please choose an option"
+msgstr "請選擇一個分區並設掛載點為\"/\""
+
+#: ../src/partmod.py:1962
+msgid "Please choose a partition for \"/\""
+msgstr "請選擇一個分區並設掛載點為\"/\""
+
+#: ../src/partmod.py:2144
+#, python-format
+msgid "Install StartOS to free space(%s)\n"
+msgstr ""
+
+#: ../src/partmod.py:2146
+msgid "this will create partiton(s) on the free space region"
+msgstr ""
+
+#: ../src/partmod.py:2156
+#, python-format
+msgid "Shrink partition(%s,%s) and Install StartOS\n"
+msgstr ""
+
+#: ../src/partmod.py:2157
+msgid "Files on the partition will not be deleted."
+msgstr ""
+
+#: ../src/partmod.py:2160
+#, python-format
+msgid "Install StartOS alongside %s(%s,%s)\n"
+msgstr ""
+
+#: ../src/partmod.py:2161
+msgid ""
+"\n"
+"You can choose which operating system want each time the computer starts up."
+msgstr ""
+
+#: ../src/partmod.py:2174
+#, python-format
+msgid "Replace %s(%s,%s) with StartOS\n"
+msgstr ""
+
+#: ../src/partmod.py:2177
+msgid ""
+"<span color=\"red\">WARNING:</span>Files on this partition will be deleted."
+msgstr ""
+
+#: ../src/partmod.py:2188
+#, fuzzy, python-format
+msgid "Erase and use entire disk(%s,%s)\n"
+msgstr "使用整塊硬碟"
+
+#: ../src/partmod.py:2190
+#, python-format
+msgid ""
+"<span color=\"red\">WARNING:</span>this option will delete any partition(s) "
+"and files on the disk '%s'"
+msgstr ""
+
+#: ../src/partmod.py:2239
+#, fuzzy
+msgid "No automatically solution"
+msgstr "自動登錄"
+
+#: ../src/partmod.py:2327
+#, python-format
+msgid "Please create an EFI system on device '%s'"
+msgstr ""
+
+#: ../src/partmod.py:2351
+#, python-format
+msgid "Install grub to GPT disk(%s) without bios_grub ?"
+msgstr ""
+
+#: ../src/partmod.py:2352
+msgid ""
+"This computer is running on BIOS mode.\n"
+"It's a good idea to make a biso_grub parttion.\n"
+msgstr ""
+
+#. #            print self._pm,self._pm.use_auto_parted
+#: ../src/partmod.py:2437
+#, fuzzy
+msgid "Applying automatically partition solution"
+msgstr "自動登錄"
+
+#: ../src/partmod.py:2450
+#, python-format
+msgid "Commit changes to \"<b>%s</b>\" ..."
+msgstr "正在提交變更至\"<b>%s</b>\"..."
+
+#: ../src/partmod.py:2454
+#, python-format
+msgid "Device \"<b>%s</b>\" is busy !"
+msgstr "設備\"<b>%s</b>\"繁忙中!"
+
+#: ../src/partmod.py:2462
+#, python-format
+msgid "\"<b>%s</b>\" changed"
+msgstr "\"<b>%s</b>\"已變更"
+
+#: ../src/partmod.py:2473
+#, python-format
+msgid "Formating \"<b>%s</b>\" as %s filesystem ..."
+msgstr "正在格式化\"<b>%s</b>\"為<b>%s</b>檔系統 ..."
+
+#: ../src/partmod.py:2481
+#, python-format
+msgid "\"<b>%s</b>\" formated"
+msgstr "\"<b>%s</b>\"已格式化"
+
+#~ msgid "Installer for installing Ylmf OS"
+#~ msgstr "Ylmf OS 安裝工具"
+
+#~ msgid "Please notice this option take all data on disk lost"
+#~ msgstr "請注意! 此選項會清空硬碟上的所有數據"
+
+#~ msgid "Removing files/directory in blacklist ..."
+#~ msgstr "正在處理黑名單 ..."
+
+#~ msgid "%s Removed"
+#~ msgstr "%s 已刪除"
+
+#~ msgid "Removing %s..."
+#~ msgstr "正在刪除檔 %s ..."
+
+#~ msgid "Blacklist done"
+#~ msgstr "黑名單處理完畢"
+
+#~ msgid "<b>Installing.....</b>"
+#~ msgstr "<b>正在安裝.....</b>"
+
+#~ msgid "<b>Installation complete .</b>"
+#~ msgstr "<b>系統安裝完畢.</b>"
+
+#~ msgid "%s copyed"
+#~ msgstr "%s 複製完畢"
+
+#~ msgid "Extracting ..."
+#~ msgstr "正在提取 ..."
+
+#, fuzzy
+#~ msgid "Installing"
+#~ msgstr "安裝(_I)"
+
+#~ msgid "Ylmf OS Installer"
+#~ msgstr "Ylmf OS 安裝器"
+
+#~ msgid "Language/timezone/keyboard"
+#~ msgstr "語言/時區/鍵盤"
+
+#~ msgid "Username/Hostname"
+#~ msgstr "用戶名/電腦名"
+
+#~ msgid "Login method"
+#~ msgstr "登錄方式"
+
+#~ msgid "Parttions Management"
+#~ msgstr "分區管理"
+
+#~ msgid "Complete"
+#~ msgstr "完成"
+
+#~ msgid "Installation aborted or cancel"
+#~ msgstr "安裝被迫中斷或已取消?"
+
+#~ msgid ""
+#~ "    <span color=\"red\" >Quickly installing mode request more cpu and "
+#~ "memory resources!</span>"
+#~ msgstr ""
+#~ "注意:\n"
+#~ "    <span color=\"red\" >快速安裝會消耗更多的CPU和記憶體等資源.</span>"
+
+#, fuzzy
+#~ msgid "_Complete"
+#~ msgstr "完成"
+
+#~ msgid "username can't start with digit"
+#~ msgstr "用戶名不能以數字開頭"
+
+#~ msgid "username can't start with \"_\""
+#~ msgstr "用戶名不能以\"_\"開頭"
+
+#~ msgid ""
+#~ "\n"
+#~ "<b><big>Add partitions</big></b>\n"
+#~ "        configure partition widgetname\n"
+#~ msgstr ""
+#~ "\n"
+#~ "<b><big>添加新硬碟分區</big></b>\n"
+#~ "        配置分區參數\n"
+
+#~ msgid "Create as:"
+#~ msgstr "分區類型:"
+
+#~ msgid "Maximum size:"
+#~ msgstr "最大:"
+
+#~ msgid "Minimum size:"
+#~ msgstr "最小:"
+
+#~ msgid "Partition label:"
+#~ msgstr "分區標籤:"
+
+#~ msgid "Partition size:"
+#~ msgstr "分區大小:"
+
+#~ msgid "partition guide"
+#~ msgstr "分區嚮導"
+
+#~ msgid "Restart later"
+#~ msgstr "稍後重啟"
+
+#~ msgid "Restart"
+#~ msgstr "重啟電腦"
+
+#~ msgid "filesystems umounted"
+#~ msgstr "檔系統已卸載"
+
+#~ msgid "Commiting changes ..."
+#~ msgstr "正在提交變更..."
+
+#~ msgid "Making <b>%s</b> file system for <b>%s</b> ..."
+#~ msgstr "正在使用<b>%s</b>檔系統格式對<b>%s</b>進行格式化 .."
+
+#~ msgid "Not format %s"
+#~ msgstr "不會格式化%s"
+
+#~ msgid "All operations completed."
+#~ msgstr "所有操作進行完畢."
+
+#~ msgid "change mount point"
+#~ msgstr "改變掛載點"
+
+#~ msgid "modify partition's mount point"
+#~ msgstr "修改分區掛載點"
+
+#~ msgid "Type"
+#~ msgstr "檔系統"
+
+#~ msgid "Mount point"
+#~ msgstr "掛載點"
+
+#~ msgid "Device(%s) is busy !"
+#~ msgstr "設備(%s)繁忙中!"
+
+#~ msgid "Are you sure to apply the operations?"
+#~ msgstr "你確定要保存這些變更嗎?"
+
+#~ msgid "Data may lost,you better bacup your data."
+#~ msgstr "數據可能會丟失,請先備份好自己的數據."
+
+#, fuzzy
+#~ msgid "Configure mountpoint for <b>%s</b>"
+#~ msgstr "設置\"<b>%s</b>\"的掛載點"
+
+#~ msgid "unused"
+#~ msgstr "未使用"
+
+#~ msgid "change/set mount point for <b>%s</b>"
+#~ msgstr "修改<b>%s</b的掛載點"
+
+#~ msgid "<span size=\"medium\">Username/hostname</span>"
+#~ msgstr "<span size=\"medium\">用戶名/電腦名</span>"
+
+#~ msgid "<big>Password</big>"
+#~ msgstr "<b>創建密碼</b>"
+
+#, fuzzy
+#~ msgid "<big>Login method</big>"
+#~ msgstr "<b>登錄方式</b>"
+
+#~ msgid "<b>User account</b>"
+#~ msgstr "<b>用戶帳戶</b>"
+
+#~ msgid "Free space"
+#~ msgstr "空閒空間"
+
+#~ msgid ""
+#~ "\n"
+#~ "<b>  Installing ylmf os,please wait ....  </b>\n"
+#~ msgstr ""
+#~ "\n"
+#~ "<b>  正在安裝 YlmfOS,請耐心等待 ...  </b>\n"
+
+#~ msgid "Login name:"
+#~ msgstr "登錄名:"
+
+#~ msgid "Preparing for installing ..."
+#~ msgstr "正在準備安裝..."
+
+#~ msgid "Require password to login and decrypt home folder"
+#~ msgstr "使用密碼登錄和加密用戶目錄"
+
+#~ msgid "Setup"
+#~ msgstr "安裝"
+
+#~ msgid ""
+#~ "\n"
+#~ "<b><big>Add partitions</big></b>\n"
+#~ "        configure partition's argument\n"
+#~ msgstr ""
+#~ "\n"
+#~ "<b><big>添加新硬碟分區</big></b>\n"
+#~ "        配置分區參數\n"
+
+#~ msgid "Apply changes"
+#~ msgstr "應用變更"
+
+#~ msgid "Delete currently mount point "
+#~ msgstr "刪除當前掛載點"
+
+#~ msgid "Set mount point as:"
+#~ msgstr "設置掛載點為:"
+
+#~ msgid "The operations may take long time,please keep  patience."
+#~ msgstr "即將進行的操作可能需要很長時間,請耐心等待."
+
+#~ msgid ""
+#~ "Abort  --abort this installation\n"
+#~ "Retry  --retry to copy the file\n"
+#~ "Ignore --ignore the file"
+#~ msgstr ""
+#~ "中斷   --退出安裝\n"
+#~ "重試   --再重新複製一次\n"
+#~ "忽略   --跳過此檔"
+
+#~ msgid "password confirmed !"
+#~ msgstr "密碼已確認!"
+
+#~ msgid "Partition manager"
+#~ msgstr "分區管理器"
+
+#~ msgid "Formating the disk ..."
+#~ msgstr "正在格式化硬碟..."
+
+#~ msgid "unexcept error"
+#~ msgstr "未知錯誤!"
+
+#~ msgid "Set timezone"
+#~ msgstr "設置時區"
+
+#~ msgid "Set language"
+#~ msgstr "設置語言"
+
+#~ msgid "configure user"
+#~ msgstr "配置用戶"
+
+#~ msgid "Almost complete ..."
+#~ msgstr "即將完成安裝..."
+
+#~ msgid "Illegal username"
+#~ msgstr "非法用戶名"
+
+#~ msgid "Password is not confirmed!"
+#~ msgstr "密碼確認失敗"
+
+#~ msgid "<b><span fgcolor='red'>Partitions changes is unchanged</span></b>  "
+#~ msgstr "<b><span fgcolor='red'>分區變更未保存</span></b>"
+
+#~ msgid "hostname can not be empty"
+#~ msgstr "主機名不能為空"
+
+#~ msgid "<b><span fgcolor='red'>Please set '/' mount point</span></b>  "
+#~ msgstr "<b><span fgcolor='red'>請設置/分區</span></b>  "
+
+#~ msgid "Do you real want to quit installation ?"
+#~ msgstr "你確定要退出安裝嗎?"
+
+#~ msgid "Install all success."
+#~ msgstr "安裝成功."
+
+#~ msgid "Copy file %s :%m"
+#~ msgstr "複製檔%s:%m"
+
+#~ msgid "device is busy !"
+#~ msgstr "設備繁忙中!"
+
+#~ msgid "Ylmf OS installer"
+#~ msgstr "Ylmf OS 安裝器"
+
+#, fuzzy
+#~ msgid "YLMF OS Installer"
+#~ msgstr "Ylmf OS 安裝器"

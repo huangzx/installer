@@ -1,0 +1,462 @@
+
+style "mydefault" = "default"
+{
+    xthickness = 1
+    ythickness = 1
+
+    font_name = "文泉驿微米黑 Regular 11"
+
+    engine "pixmap" {
+        image {
+            function = FOCUS
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "button_focus.png"
+            stretch = TRUE # this stretches the image
+        }
+    }
+}
+
+
+style "blue_label" = "mydefault"
+{
+    fg[NORMAL]        = "#195FD5"
+    fg[PRELIGHT]      = "#195FD5"
+    fg[SELECTED]      = "#FFFFFF"
+    fg[INSENSITIVE]   = "#6E95D5"
+    fg[ACTIVE]        = "#FFFFFF"
+
+    text[NORMAL]        = "#195FD5"
+    text[PRELIGHT]      = "#195FD5"
+    text[SELECTED]      = "#FFFFFF"
+    text[INSENSITIVE]   = "#6E95D5"
+    text[ACTIVE]        = "#FFFFFF"
+
+}
+
+style "white_label" = "mydefault"
+{
+	fg[NORMAL]        = "#FFFFFF"
+	fg[PRELIGHT]      = "#FFFFFF"
+	fg[SELECTED]      = "#195FD5"
+	fg[INSENSITIVE]   = "#6E95D5"
+	fg[ACTIVE]        = "#FFFFFF"
+
+	text[NORMAL]        = "#195FD5"
+	text[PRELIGHT]      = "#195FD5"
+	text[SELECTED]      = "#FFFFFF"
+	text[INSENSITIVE]   = "#6E95D5"
+	text[ACTIVE]        = "#FFFFFF"
+}
+
+style "titlebar" = "mydefault" {
+    engine "pixmap" {
+        image {
+            function = FLAT_BOX
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "titlebar_bg.png"
+            detail = "eventbox"
+            #border = { 10, 10, 0, 0 } # = {Left, Right, Top, Bottom} 
+            stretch = TRUE # this stretches the image
+            #overlay_file = "thumb-h-scrollbar.png"
+            #overlay_stretch = FALSE
+        }
+    }
+}
+
+
+style "install_info_pad" = "mydefault" {
+    bg_pixmap[NORMAL]= "install_info_pad_bg.png"
+    engine "pixmap" {
+        image {
+            function = FLAT_BOX
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "frame.png"
+            detail = "eventbox"
+            #border = { 10, 10, 0, 0 } # = {Left, Right, Top, Bottom} 
+            stretch = TRUE # this stretches the image
+            #overlay_file = "thumb-h-scrollbar.png"
+            #overlay_stretch = FALSE
+        }
+    }
+}
+
+style "install_info_pad1" = "mydefault" {
+    engine "pixmap" {
+
+    image
+    {
+      function			= SHADOW
+      shadow			= IN
+      recolorable		= FALSE
+      file				= "install_info_pad_bg.png"
+      border			=  {30, 30, 30, 30}
+      stretch			= TRUE
+    }
+        image {
+            function = SHADOW
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "install_info_pad_bg.png"
+            detail = "viewportbin"
+            stretch = TRUE # this stretches the image
+            border = {10, 10, 10, 10}
+        }
+        image {
+            function = SHADOW
+            state = NORMAL
+            shadow = NONE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "install_info_pad_bg.png"
+            border = {10, 10, 10, 10}
+            detail = "scrolled_window"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = SHADOW
+            state = NORMAL
+            shadow = IN
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "install_info_pad_bg.png"
+            detail = "scrolled_window"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = SHADOW
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "install_info_pad_bg.png"
+            detail = "scrolled_window"
+            stretch = TRUE # this stretches the image
+        }
+        image{
+                function = SHADOW
+                file = "install_info_pad_bg.png"
+                border = {10, 10, 10, 10}
+                detail = "scrolled_window"
+        }
+    }
+}
+
+style "progressbar" = "mydefault" 
+{
+
+xthickness 		= 1
+ythickness 		= 1
+
+##bg[SELECTED]	  	= @selected_bg_color
+
+GtkProgressBar::min-horizontal-bar-height		= 18
+GtkProgressBar::min-vertical-bar-width			= 18
+
+    engine "pixmap" {
+        image {
+            function = BOX
+            shadow = IN
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "progressbar_bg.png"
+            detail = "trough"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = OUT
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "progressbar_bar.png"
+            detail = "bar"
+            stretch = TRUE # this stretches the image
+        }
+
+    }
+}
+
+style "install_progress_button" = "mydefault" 
+{
+#	fg[NORMAL]        = '#FFFFFF'
+#	fg[PRELIGHT]      = '#FFFFFF'
+#	fg[SELECTED]      = '#FFFFFF'
+	fg[INSENSITIVE]   = darker ('#FFFFFF')
+#	fg[ACTIVE]        = '#FFFFFF'
+
+    engine "pixmap" {
+        image {
+            function = BOX
+            shadow = OUT
+            state = NORMAL
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "install_progress_button_normal.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = IN
+            state = ACTIVE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "install_progress_button_press.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = OUT
+            state = PRELIGHT
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "install_progress_button_prelight.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = OUT
+            state = INSENSITIVE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "install_progress_button_insensitive.png"
+            stretch = TRUE # this stretches the image
+            #detail = "button"
+        }
+    }
+}
+
+style "restart_later_button" = "install_progress_button"
+{
+}
+
+style "restart_later_button_drop"
+{
+    engine "pixmap" {
+        image {
+            function = BOX
+            shadow = OUT
+            state = NORMAL
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "restart_later_normal.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = IN
+            state = ACTIVE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "restart_later_press.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = OUT
+            state = PRELIGHT
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "restart_later_prelight.png"
+            stretch = TRUE # this stretches the image
+        }
+
+#        image {
+#            function = BOX
+#            shadow = OUT
+#            state = INSENSITIVE
+#            recolorable = TRUE # what does that mean? it's not implemented!
+#            file = "restart_later_insensitive.png"
+#            stretch = TRUE # this stretches the image
+#            #detail = "button"
+#        }
+    }
+}
+
+style "bottom_bg" = "mydefault" {
+    engine "pixmap" {
+        image {
+            function = FLAT_BOX
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "bottom_bg.png"
+            detail = "eventbox"
+            #border = { 10, 10, 0, 0 } # = {Left, Right, Top, Bottom} 
+            stretch = TRUE # this stretches the image
+            #overlay_file = "thumb-h-scrollbar.png"
+            #overlay_stretch = FALSE
+        }
+    }
+}
+
+style "layoutwidget" = "mydefault" {
+
+    xthickness = 6
+    ythickness = 4
+    engine "pixmap" {
+        image {
+            function = BOX_GAP
+            gap_side = BOTTOM
+            shadow = OUT
+            state = NORMAL
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "layout_widget_tip_box_gap.png"
+            detail = "layoutwidget"
+            border = { 10, 10, 0, 0 } # = {Left, Right, Top, Bottom} 
+            stretch = TRUE # this stretches the image
+            #overlay_file = "thumb-h-scrollbar.png"
+            #overlay_stretch = FALSE
+        }
+    }
+    engine "pixmap" {
+        image {
+            function = BOX
+            shadow = OUT
+            state = NORMAL
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "layout_widget_bg.png"
+            detail = "layoutwidget"
+            border = { 10, 10, 0, 0 } # = {Left, Right, Top, Bottom} 
+            stretch = TRUE # this stretches the image
+            #overlay_file = "thumb-h-scrollbar.png"
+            #overlay_stretch = FALSE
+        }
+    }
+
+}
+
+style "mainbutton" = "blue_label"
+{
+	fg[ACTIVE]        = '#FFFFFF'
+
+    engine "pixmap" {
+        image {
+            function = BOX
+            shadow = OUT
+            state = NORMAL
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "main_button_normal.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = IN
+            state = ACTIVE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "main_button_pressed.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = OUT
+            state = PRELIGHT
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "main_button_prelight.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = OUT
+            state = INSENSITIVE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "main_button_insensitive.png"
+            stretch = TRUE # this stretches the image
+            #detail = "button"
+        }
+    }
+}
+
+style "combo_box" = "mainbutton"
+{
+    engine "pixmap" {
+        image {
+            function = BOX
+            shadow = OUT
+            state = NORMAL
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "combo_box_normal.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = IN
+            state = ACTIVE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "combo_box_pressed.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = OUT
+            state = PRELIGHT
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "combo_box_prelight.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = BOX
+            shadow = OUT
+            state = INSENSITIVE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "combo_box_insensitive.png"
+            stretch = TRUE # this stretches the image
+            #detail = "button"
+        }
+        image {
+            function = FOCUS
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "button_focus.png"
+            stretch = TRUE # this stretches the image
+        }
+        image {
+            function = VLINE
+            recolorable = TRUE # what does that mean? it's not implemented!
+            file = "vline.png"
+            stretch = TRUE # this stretches the image
+        }
+    }
+}
+
+
+style "myentry" = "blue_label"
+{
+
+ bg_pixmap[NORMAL]="<parent>"
+ bg_pixmap[ACTIVE]="<parent>"
+ bg_pixmap[PRELIGHT]= "<parent>"
+ bg_pixmap[SELECTED]= "<parent>"
+ GtkEntry::inner-border = {3,3,3,3}
+ engine "pixmap"
+  {
+    image
+    {
+      function			= FOCUS
+      recolorable		= TRUE
+      file				= "entry_bg.png"
+      detail			= "entry"
+      border			= { 3,3,3,3 }
+      stretch			= TRUE
+    }
+    image
+    {
+      function			= FLAT_BOX
+      recolorable		= TRUE
+      state				= NORMAL
+      detail			= "entry_bg"
+      file				= "entry_bg.png"
+      border			= { 3,3,3,3 }
+      stretch			= TRUE
+    }
+  image
+   {
+     function			= SHADOW
+     detail				= "entry"
+     shadow			    = IN
+     recolorable		= FALSE
+     file				= "entry_shadow.png"
+     border			    = { 3,3,3,3 }
+     stretch			= TRUE
+    }
+  }
+}
+
+style "webframe"
+{
+    bg_pixmap[NORMAL]= "frame.png"
+}
+
+widget_class "*GtkProgressBar" style:highest "progressbar"
+widget "*.titlebar_event" style "titlebar"
+
+widget "*.install_progress_button*" style:highest "install_progress_button"
+widget "*.restart_later_button*" style:highest "install_progress_button" 
+
+widget "*MainFrameMod*.titlebar" style "white_label"
+
+#widget "*.install_info_pad*" style:highest "install_info_pad"
+#widget_class "*MainFrameMod.GtkVBox.GtkAlignment.GtkEventBox" style:highest "webframe"
+
+widget "*GtkAlignment.GtkEventBox" style:highest "install_info_pad"
+widget "*MainFrameMod.GtkVBox.GtkEventBox.GtkVBox.GtkEventBox" style:highest "bottom_bg"

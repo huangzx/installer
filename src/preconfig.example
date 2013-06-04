@@ -1,0 +1,119 @@
+# osinstaller 预配置文件
+
+#
+# 真值表明此文件不希望被修改, osinstaller不会改变其内容
+# 非(false/0/no) 为真
+#
+#readonly=false
+
+#
+# 语言, 仅支持zh_CN.UTF-8/zh_TW.UTF-8/zh_HK.UTF-8/en_US.UTF-8
+#
+#lang=en_US.UTF-8
+
+#
+# 时区, 可以在 /usr/share/zoneinfo /找到系统支持的时区
+#
+#tzone=Asia/Chongqing
+
+#
+# 设置键盘布局
+#
+#kbd=us
+
+#
+# 快速模式安装 false/no/数字零 为假,否则为真
+#
+#quickly_mode=false
+
+#
+# 是否把 grub 安装到根分区, true/yes/非零数字 为真
+#
+#bldr_to_root_disk=False
+
+#
+# 是否安装 grub 到硬盘的 mbr, 只有false/no/数字零 为假
+#
+#install_bootloader=True
+
+#
+# 如果安装grub, 则安装到/dev/sda
+#
+#bootloader_device=/dev/sda
+
+#
+# 主机名
+#
+#hostname=user-host
+
+#
+# 用户名
+#
+#user=username
+
+# 
+# 登录方式: 0 自动登录, 1 密码登录
+#
+#logintype=0
+
+#
+# 设置密码为123
+#
+#password=123
+
+#
+#设置密码, xxx 为加密后的密码, 此项比 password 优先级高
+#
+#encrypted-password=xxxx
+
+#
+# 程序启动后是否自动进入安装, true/yes/1 为真
+#
+#autoinstall=false
+
+#
+# 安装完成后是否自动重启, true/yes/1 为真
+#
+#autorestart=false
+
+#
+# 使用整个硬盘 /dev/sda, 此项回重新划分硬盘分区, 且分区后格式化
+# 1、MM 为内存大小, DM 为硬盘大小, 如果 MM < 3G && DM-MM×2 > MMx8 而且 DM-MM×2 > 5G
+# 则划分两个分区 / 和 swap. / 的大小为 DM-MM×2, swap 大小为 MMx2
+# MM < 3G 大内存不分swap分区
+#  DM-MM×2 > MMx8 的意义为硬盘空间远大内存
+#  DM-MM×2 > 5G 划出 swap 分区后要有足够的空间给系统使用, 否则swap无意义
+# 2、硬盘只划出一个root分区
+#   
+#
+#use_entire_disk=/dev/sda
+
+#*********************************
+# 下选项没有太多测试不要使用
+#*********************************									
+
+# 设置 / 分区, 若有 use_entire_disk 项则此项无效
+# 分区的文件系统格式必须是 linux 支持作为 / 分区的格式, 否则必须设置 root_fstype 和root_formating
+# 且 root_formating 设为 true, 以便安装工具格式化文件系统
+
+#root=/dev/sda1
+
+#
+# 设置 / 分区的文件系统,格式支持ext3/ext4
+#
+#root_fstype=ext4
+
+#
+# 是否格式化 / 分区, 默认为 false, 需要 root_fstype 否则无效, true/yes/非零数字为真
+#
+#root_formating=false
+
+#
+# 忽略挂载错误, true/yes/非零数字 为真
+#
+#ignore_mount_error=false
+
+# osinstaller 加载 preconfig 方法
+# osinstaller --preconfig=path_to_preconfig_file
+# 注意 wubi 安装时 --preconfig 无效
+

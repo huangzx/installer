@@ -1,0 +1,23 @@
+	../data/account_ui.glade \
+	../data/installer_ui.glade \
+	../data/localetzone_ui.glade \
+	../data/osinstaller.desktop.in.in \
+	../data/parted_man.glade \
+	../src/accountmod.py \
+	../src/BGwidget.py \
+	../src/copyfilemod.py \
+	../src/__init__.py \
+	../src/installerenv.py \
+	../src/installscript.py \
+	../src/keyboard_names.py \
+	../src/labelcontexts.py \
+	../src/layoutwidget.py \
+	../src/localetzonemap.py \
+	../src/localetzonemod.py \
+	../src/mainframemod.py \
+	../src/misc.py \
+	../src/osdata.py \
+	../src/partman.py \
+	../src/partmod.py \
+	../src/testparted.py \
+	../src/tzone.py

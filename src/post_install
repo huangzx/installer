@@ -1,0 +1,65 @@
+#!/bin/bash
+#
+# Note:
+# 1. exit code of this file must be 0 OR installation will be aborted
+# 2. this file will be called before /target umounted
+#
+
+# Record locale
+cat "$TARGETDIR"/etc/default/locale  >>"$TARGETDIR"/etc/environment
+
+# Creat "well know" user dirs
+# Creat well known users dirs, depends on locale
+. "$TARGETDIR"/etc/environment
+if [ -x "$TARGETDIR"/usr/bin/xdg-user-dirs-update ]; then
+    chroot "$TARGETDIR" su "$INS_USERNAME" -c "LANG=$LANG /usr/bin/xdg-user-dirs-update --force"
+fi
+
+# Creat /etc/locale.conf for gdm(>=3.8)
+echo "LANG=\"$LANG\"" >"$TARGETDIR"/etc/locale.conf
+
+# Remove no longer needed apps
+for file in osinstaller fvwm; do
+    chroot "$TARGETDIR" /usr/bin/ypkg -C ${file}
+done
+
+# If found nomodeset in cmdline, add to grub default configfile
+# Found swap partition, add resume= to grub default configfile for hibernation
+GRUBCONFIG="$TARGETDIR"/etc/default/grub	
+FSTAB="$TARGETDIR"/etc/fstab
+[ -f "$GRUBCONFIG" ] && . $GRUBCONFIG
+
+for ARG in $(cat /proc/cmdline); do
+	case "${ARG}" in
+		nomodeset) GRUB_CMDLINE_LINUX+=" nomodeset"
+	    		   break
+	esac
+done
+
+SWAPUUID=$(grep ^UUID=.*[[:space:]]swap[[:space:]] $FSTAB |head -n1 |awk '{print $1}')
+if [ "x$SWAPUUID" != "x" ]; then
+	SWAPDISK=$(blkid -U ${SWAPUUID#UUID=})					
+	SWAPTYPE=$(blkid -s TYPE -o value $SWAPDISK)
+	[ "x$SWAPTYPE" = "xswap" ] && GRUB_CMDLINE_LINUX+=" resume=$SWAPUUID"
+fi
+
+sed -i '/GRUB_CMDLINE_LINUX=/d' $GRUBCONFIG
+sed -i '/GRUB_CMDLINE_LINUX_DEFAULT=/a\GRUB_CMDLINE_LINUX=\"'"$GRUB_CMDLINE_LINUX"'\"' $GRUBCONFIG
+
+# Update grub.cfg
+chroot "$TARGETDIR" /usr/sbin/update-grub
+
+# Install date
+/usr/bin/python -c 'import time;print time.time()' >"$TARGETDIR"/etc/install_date
+
+# Rm isodevice
+umount "$TARGETDIR/isodevice"
+rmdir "$TARGETDIR/isodevice"
+
+# Umount target partitions
+umount "$TARGETDIR/dev"
+umount "$TARGETDIR/sys" 
+umount "$TARGETDIR/proc" 
+umount "$TARGETDIR"
+
+exit 0

@@ -1,0 +1,62 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+AC_PREREQ([2.63])
+AC_INIT([osinstaller], [0.9], [weikting@gmail.com])
+AC_CONFIG_SRCDIR([src/osinstaller])
+AC_CONFIG_HEADERS([config.h])
+
+CFLAGS="-g3"
+CXXFLAGS="-g3"
+
+AM_INIT_AUTOMAKE
+AM_MAINTAINER_MODE
+
+# Checks for programs
+AC_PROG_AWK
+AC_PROG_CPP
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_CC_C_O
+
+PKG_PROG_PKG_CONFIG
+AM_PATH_PYTHON([2.5])
+if test "x$PYTHON" = "x:"; then
+    AC_MSG_ERROR([Python not found])
+fi
+
+##AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR(could not find Python headers or library)])
+
+pkg_webkit="webkit-1.0"
+##PKG_CHECK_MODULES(WEBKIT,[$pkg_webkit])
+
+IT_PROG_INTLTOOL([0.40.0])
+AM_PROG_LIBTOOL
+LIBTOOL="$LIBTOOL --silent"
+
+GETTEXT_PACKAGE=$PACKAGE
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"], [Gettext package])
+
+if test "x${prefix}" = "xNONE"; then
+  AC_DEFINE_UNQUOTED(LOCALEDIR, "${ac_default_prefix}/${DATADIRNAME}/locale", [Locale dir])
+else
+  AC_DEFINE_UNQUOTED(LOCALEDIR, "${prefix}/${DATADIRNAME}/locale", [Locale dir])
+fi
+
+libparted_fs_resize=$(gcc -print-file-name=libparted-fs-resize.so)
+AM_CONDITIONAL([HAS_LIBPARTED_FS_RESIZE], [test -f ${libparted_fs_resize}])
+
+#AM_GNU_GETTEXT([external])
+#AM_GNU_GETTEXT_VERSION(0.16.1)
+
+AC_CONFIG_FILES([Makefile
+                 data/Makefile
+                 data/osinstaller.desktop.in
+                 icons/Makefile
+                 po/Makefile.in
+                 src/Makefile
+                 gtkrc/Makefile
+                 src/jscript/Makefile
+                 ])
+AC_OUTPUT

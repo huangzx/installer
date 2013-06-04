@@ -1,0 +1,12 @@
+
+[Desktop Entry]
+
+_Name=StartOS Installer
+_Comment=Installer for installing StartOS
+Exec=osinstaller
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;System;
+GenericName=OSInstaller
+StartupNotify=true
+Icon=osinstaller

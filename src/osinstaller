@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# -*- coding: utf-8; Mode: Python; indent-tabs-mode: nil; tab-width: 4 -*-
+# osinstaler
+# Python module for osinstaller.
+#
+# Copyright (C) 2010 Ylmf, Inc.
+#
+#
+# Ylmf Author(s): wkt <weikting@gmail.com>
+#               
+#
+
+import os
+import sys
+
+from osinstaller.misc import run_as_root_and_inhibit
+
+
+if __name__ == '__main__':
+    if not 'boot=casper' in open('/proc/cmdline').read():
+        sys.stderr.write('Error: Running NOT in LiveCD, ignoring.')
+        sys.exit(1)
+	run_as_root_and_inhibit()

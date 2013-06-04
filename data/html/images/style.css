@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+#Box1 {
+	display: block;
+}
+#Box2 ,#Box3,#Box4{
+	display: none;
+}
+
+
+
+
+#imgbox {
+	float: left;
+	margin: 12px 0 0 12px;
+}
+#imgbox li {
+	display: none;
+}
+
+
+#numBox {
+	float: right;
+}
+#id1 {
+	float: left;
+
+
+}
+#numBox li {
+	width: 205px;
+	height: 74px;
+	cursor: pointer;
+}
+#Box2 {
+	width: 755px;
+	height: 370px;
+	border: 1px solid black;
+	overflow: hidden;
+	background-image: url(pic-bg.jpg);
+}
+#btn1:hover {
+	background-image: url(hover-btn1.jpg);
+}
+#btn2:hover {
+	background-image: url(hover-btn2.jpg);
+}
+#btn3:hover {
+	background-image: url(hover-btn3.jpg);
+}
+#btn4:hover {
+	background-image: url(hover-btn4.jpg);
+}
+#btn5:hover {
+	background-image: url(hover-btn5.jpg);
+}
+#btn1.current {
+	background-image: url(current-btn-1.jpg);
+}
+#btn2.current {
+	background-image: url(current-btn-2.jpg);
+}
+#btn3.current {
+	background-image: url(current-btn-3.jpg);
+}
+#btn4.current {
+	background-image: url(current-btn-4.jpg);
+}
+#btn5.current {
+	background-image: url(current-btn-5.jpg);
+}
+#button li {
+	width: 12px;
+	height: 12px;
+	background-image: url(pagination.png);
+	float: left;
+	margin-left: 2px;
+}
+#button li.current {
+	background-position: 0 -12px;
+}
+
+#button {
+	position: absolute;
+	cursor: pointer;
+	top: 342px;
+	left: 18px;
+}

@@ -1,0 +1,5 @@
+###path must be absolute
+###directory must end with '/'
+/etc/fstab
+/sys/
+/proc/

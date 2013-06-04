@@ -1,0 +1,132 @@
+#!/usr/bin/env python
+# -*- coding: utf-8; Mode: Python; indent-tabs-mode: nil; tab-width: 4 -*-
+# OSInstaler
+# Python module for osinstaller.
+#
+# Copyright (C) 2010 Ylmf, Inc.
+#
+#
+# Ylmf Author(s): wkt <weikting@gmail.com>
+#               
+#
+
+import locale
+try:
+	locale.setlocale(locale.LC_ALL, '')
+except:pass
+
+
+import os
+import sys
+import gtk
+
+from osinstaller import *
+import gettext
+
+import glib
+
+insenv = misc.insenv
+
+def parser_args(argv,exit=True,insenv=None,raise_on_error=True):
+    args={}
+    for ag in argv:
+        if ag == '--version' or ag == '-V':
+            print os.path.basename(sys.argv[0])+'     '+insenv.version
+            sys.exit(0)
+        elif ag == '--fullscreen' or ag == '-F':
+            args['fullscreen']=True
+        elif ag == '--maximize' or ag == '-M':
+            args['maximize']=True
+        elif '--wubi-dir=/' in ag:
+            agv=ag.split('=')
+            args['wubi-dir']=agv[1].rstrip('/')
+            insenv.is_desktop = False
+        elif '--preconfig=' in ag:
+            agv=ag.split('=')
+            args['preconfig']=agv[1]
+        elif ag.startswith('--loadiso='):
+            agv=ag.split('=')
+            args['iso']=agv[1]
+        elif ag.startswith('--quit') or ag.startswith('-Q'):
+            args['quit']=True
+        else:
+            if raise_on_error:
+                raise Exception("Unkown arguments option -- %s" % ag)
+    return args
+
+def action_to_args(mfm,args):
+    run_args = None
+    if 'fullscreen' in args and args['fullscreen']:
+        mfm.fullscreen()
+    elif 'maximize' in args and args['maximize']:
+        mfm.maximize()
+    elif 'wubi-dir' in args:
+        run_args = args
+    elif 'quit' in args and args['quit']:
+        mfm.emit('quit')
+
+    return run_args
+
+def set_gtk_styles():
+    settings = gtk.settings_get_default()
+
+    gtkrc= '../gtkrc/gtkrc'
+    if not os.path.exists(gtkrc):
+        gtkrc = insenv.datadir+'/gtkrc/gtkrc'
+    gtk.rc_parse(gtkrc)
+    gtk.window_set_default_icon_name('osinstaller')
+
+def single_hook(strv,hook_data):
+    if 'mfm' in hook_data:
+        mfm = hook_data['mfm']
+        args = parser_args(strv,exit=False,insenv=insenv,raise_on_error=False)
+        action_to_args(mfm,args)
+        mfm.present()
+
+def setup_bg():
+    bg = BGwidget.bgwidget()
+    bg.show_all()
+
+#misc.pdb_trace()
+
+if __name__ == '__main__':
+    mfm = None
+    try:
+        glib.threads_init()
+        hook_data = {}
+        sa = misc.SingleApp(hook=single_hook,hook_data=hook_data)
+        if sa.client:
+            sa.send_argv(sys.argv[1:])
+            sys.exit(0)
+
+        args = parser_args(sys.argv[1:],insenv=insenv)
+
+#        misc.pdb_trace()
+#        if not insenv.is_desktop:
+#            setup_bg()
+
+        misc.MountMod.umount_all()
+        misc.MountMod.swap_off()
+        set_gtk_styles()
+        mfm = mainframemod.MainFrameMod(insenv)
+        sc = mfm.toplevel.get_screen()
+        cm = sc.get_rgba_colormap()
+        mfm.toplevel.set_colormap(cm)
+        hook_data['mfm'] = mfm
+
+        if args.has_key('iso'):
+            s=misc.MountMod.LoadIso(args['iso'])
+            if s != 0:
+                raise Exception("LoadIso failed");
+        action_to_args(mfm,args)
+        mfm.run(args)
+    except SystemExit:
+        pass
+    except:
+        print >>sys.stderr,misc.exception_msg()
+        misc.MountMod.umount_all()
+    finally:
+        if mfm:
+            mfm.save_preconfig()
+            del mfm
+
