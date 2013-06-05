@@ -19,7 +19,7 @@ fi
 echo "LANG=\"$LANG\"" >"$TARGETDIR"/etc/locale.conf
 
 # Remove no longer needed apps
-for file in osinstaller fvwm; do
+for file in startos-installer; do
     chroot "$TARGETDIR" /usr/bin/ypkg -C ${file}
 done
 
