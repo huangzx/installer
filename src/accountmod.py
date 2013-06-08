@@ -153,9 +153,7 @@ class AccountHost(GOBjectThreadMod):
             config.add_section('SeatDefaults')
 
         config.set('SeatDefaults','autologin-user',self.username)
-        config.set('SeatDefaults','autologin-user-timeout',0)
-        config.set('SeatDefaults','greeter-session','lightdm-startos-greeter')
-        config.set('SeatDefaults','autologin-guest','false')
+        config.set('SeatDefaults','autologin-user-timeout','0')
 
         config.write2file(cf)
 
