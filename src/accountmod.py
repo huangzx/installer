@@ -184,7 +184,7 @@ class AccountHost(GOBjectThreadMod):
 
     def setup_user(self):
         user_steps=0
-        gps=['adm','floppy','audio','video','sambashare','wheel','lp','scanner']
+        gps=['adm','floppy','audio','video','sambashare','wheel','lp','scanner','systemd-journal']
 
         user_steps = 2+len(gps)
         user_step = 0.0

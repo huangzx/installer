@@ -16,7 +16,9 @@ if [ -x "$TARGETDIR"/usr/bin/xdg-user-dirs-update ]; then
 fi
 
 # Creat /etc/locale.conf for gdm(>=3.8)
-echo "LANG=\"$LANG\"" >"$TARGETDIR"/etc/locale.conf
+if [ -x "$TARGETDIR"/usr/sbin/gdm ]; then
+    echo "LANG=\"$LANG\"" >"$TARGETDIR"/etc/locale.conf
+fi
 
 # Remove no longer needed apps
 for file in startos-installer; do
