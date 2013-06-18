@@ -1022,8 +1022,10 @@ class MountMod:
                 dev_str = path.replace('/isodevice/','/host/',1)
 
             if is_block_file(path):
-                dev_str="UUID=%s" % get_partition_uuid(path)
-                comment="### %s is %s during installation\n" % (m,path)
+                #dev_str="UUID=%s" % get_partition_uuid(path)
+                #comment="### %s is %s during installation\n" % (m,path)
+                dev_str=path
+                comment="### %s is %s,uuid=%s during installation\n" % (m,path,get_partition_uuid(path))
             else:
                 opts='loop,'+opts
 
