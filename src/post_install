@@ -11,9 +11,9 @@ cat "$TARGETDIR"/etc/default/locale  >>"$TARGETDIR"/etc/environment
 # Creat "well know" user dirs
 # Creat well known users dirs, depends on locale
 . "$TARGETDIR"/etc/environment
-if [ -x "$TARGETDIR"/usr/bin/xdg-user-dirs-update ]; then
-    chroot "$TARGETDIR" su "$INS_USERNAME" -c "LANG=$LANG /usr/bin/xdg-user-dirs-update --force"
-fi
+#if [ -x "$TARGETDIR"/usr/bin/xdg-user-dirs-update ]; then
+#    chroot "$TARGETDIR" su "$INS_USERNAME" -c "LANG=$LANG /usr/bin/xdg-user-dirs-update --force"
+#fi
 
 # Creat /etc/locale.conf for gdm(>=3.8)
 if [ -x "$TARGETDIR"/usr/sbin/gdm ]; then
