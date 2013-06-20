@@ -21,9 +21,15 @@ if [ -x "$TARGETDIR"/usr/sbin/gdm ]; then
 fi
 
 # Remove no longer needed apps
-for file in startos-installer; do
-    chroot "$TARGETDIR" /usr/bin/ypkg -C ${file}
+for app in startos-installer; do
+    chroot "$TARGETDIR" /usr/bin/ypkg -C ${app}
 done
+
+for dir in /etc/skel /home/"$INS_USERNAME"; do
+    file="$TARGETDIR"/"${dir}"/.kde4/share/config/kickoffrc
+    [ -f "${file}" ] && sed -i 's/,\/usr\/share\/applications\/osinstaller.desktop//g' "${file}"
+done
+
 
 # If found nomodeset in cmdline, add to grub default configfile
 # Found swap partition, add resume= to grub default configfile for hibernation
