@@ -90,12 +90,10 @@ msgid "Eorror details"
 msgstr "詳細錯誤資訊"
 
 #: ../data/installer_ui.glade.h:10
-#, fuzzy
 msgid "Username"
 msgstr "用戶名:"
 
 #: ../data/installer_ui.glade.h:11
-#, fuzzy
 msgid "Hostname"
 msgstr "電腦名:"
 
@@ -104,12 +102,10 @@ msgid "Password"
 msgstr "密碼"
 
 #: ../data/installer_ui.glade.h:13
-#, fuzzy
 msgid "Confirm"
 msgstr "確認:"
 
 #: ../data/installer_ui.glade.h:16
-#, fuzzy
 msgid "Language"
 msgstr "語言:"
 
@@ -118,7 +114,6 @@ msgid "Time Zone:"
 msgstr "時區:"
 
 #: ../data/installer_ui.glade.h:18
-#, fuzzy
 msgid "Keyboard:"
 msgstr "鍵盤佈局:"
 
@@ -155,23 +150,20 @@ msgid "Keyboard layout:"
 msgstr "鍵盤佈局:"
 
 #: ../data/osinstaller.desktop.in.in.h:1
-#, fuzzy
 msgid "StartOS Installer"
-msgstr "YlmfOS 安裝工具"
+msgstr "StartOS 安裝工具"
 
 #: ../data/osinstaller.desktop.in.in.h:2
-#, fuzzy
 msgid "Installer for installing StartOS"
-msgstr "Ylmf OS 安裝工具"
+msgstr "安装 StartOS 到硬盤"
 
 #: ../data/parted_man.glade.h:1
 msgid "Advance"
 msgstr "高級"
 
 #: ../data/parted_man.glade.h:2
-#, fuzzy
 msgid "Install bootloader"
-msgstr "安裝引導工具到MBR"
+msgstr "安裝引導工具到 MBR"
 
 #: ../data/parted_man.glade.h:3
 msgid "Device for bootloader:"
@@ -233,7 +225,6 @@ msgid "<b>mountpoint:</b>"
 msgstr "<b>掛載點:</b>"
 
 #: ../data/parted_man.glade.h:17
-#, fuzzy
 msgid "Select disk"
 msgstr "選擇硬碟:"
 
@@ -242,7 +233,6 @@ msgid ":"
 msgstr ""
 
 #: ../data/parted_man.glade.h:19
-#, fuzzy
 msgid "Automatically"
 msgstr "自動登錄"
 
@@ -373,17 +363,14 @@ msgid "Copying %s ..."
 msgstr "正在複製檔 %s ..."
 
 #: ../src/copyfilemod.py:284
-#, fuzzy
 msgid "Cleaning files ..."
 msgstr "正在卸載檔系統 ..."
 
 #: ../src/copyfilemod.py:302
-#, fuzzy
 msgid "Cleaning done"
 msgstr "完成檔系統卸載任務."
 
 #: ../src/copyfilemod.py:348
-#, fuzzy
 msgid "Installing files"
 msgstr "安裝失敗"
 
@@ -514,14 +501,12 @@ msgid "_Quit"
 msgstr "稍後重啟(_Q)"
 
 #: ../src/mainframemod.py:256
-#, fuzzy
 msgid "Almost finished"
-msgstr "安裝失敗"
+msgstr "安裝即將完成"
 
 #: ../src/mainframemod.py:298
-#, fuzzy
 msgid "Installation finished"
-msgstr "安裝失敗"
+msgstr "安裝完成"
 
 #: ../src/mainframemod.py:300
 msgid ""
@@ -589,9 +574,8 @@ msgid "No automatically option"
 msgstr "自動登錄"
 
 #: ../src/mainframemod.py:657
-#, fuzzy
 msgid "Wellcome to StartOS"
-msgstr "歡迎使用 Ylmf OS"
+msgstr "歡迎使用 StartOS"
 
 #. self.uiframe.progress_label.set_markup(_("Complete"))
 #: ../src/mainframemod.py:1100
@@ -619,9 +603,8 @@ msgid "<b>Error</b>"
 msgstr "<b>錯誤</b>"
 
 #: ../src/misc.py:986
-#, fuzzy
 msgid "Must set mountpoint '/'"
-msgstr "設置掛載點"
+msgstr "必須設置根（/）掛載點"
 
 #: ../src/misc.py:1160
 #, python-format
@@ -639,19 +622,16 @@ msgid "Can't get preseed.cfg"
 msgstr "無法找到檔'preseed.cfg'"
 
 #: ../src/partmod.py:55
-#, fuzzy
 msgid "Recommended"
-msgstr "擴展分區"
+msgstr "推薦使用擴展分區"
 
 #: ../src/partmod.py:57
-#, fuzzy
 msgid "Swap filesystem"
-msgstr "檔系統"
+msgstr "交換分區"
 
 #: ../src/partmod.py:59 ../src/partmod.py:1465
-#, fuzzy
 msgid "EFI system"
-msgstr "檔系統:"
+msgstr "EFI 檔系統:"
 
 #: ../src/partmod.py:107
 msgid "Where system will be"
@@ -814,7 +794,6 @@ msgid "Don't use this partition"
 msgstr "不用此分區"
 
 #: ../src/partmod.py:1755
-#, fuzzy
 msgid "Unformated partition"
 msgstr "不格式化此分區"
 

@@ -155,21 +155,18 @@ msgid "Keyboard layout:"
 msgstr "鍵盤佈局："
 
 #: ../data/osinstaller.desktop.in.in.h:1
-#, fuzzy
 msgid "StartOS Installer"
-msgstr "YlmfOS 安裝工具"
+msgstr "StartOS 安裝工具"
 
 #: ../data/osinstaller.desktop.in.in.h:2
-#, fuzzy
 msgid "Installer for installing StartOS"
-msgstr "Ylmf OS 安裝工具"
+msgstr "安装 StartOS 到硬碟"
 
 #: ../data/parted_man.glade.h:1
 msgid "Advance"
 msgstr "高級"
 
 #: ../data/parted_man.glade.h:2
-#, fuzzy
 msgid "Install bootloader"
 msgstr "安裝引導工具到 MBR"
 
@@ -521,7 +518,7 @@ msgstr "安裝失敗"
 #: ../src/mainframemod.py:298
 #, fuzzy
 msgid "Installation finished"
-msgstr "安裝失敗"
+msgstr "安裝完成"
 
 #: ../src/mainframemod.py:300
 msgid ""

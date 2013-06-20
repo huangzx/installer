@@ -1,12 +1,16 @@
-
 [Desktop Entry]
-
-_Name=StartOS Installer
-_Comment=Installer for installing StartOS
-Exec=osinstaller
-Terminal=false
+Encoding=UTF-8
+Version=1.0
 Type=Application
+Exec=osinstaller
+TryExec=osinstaller
+Terminal=false
 Categories=GNOME;GTK;System;
-GenericName=OSInstaller
 StartupNotify=true
+_Name=StartOS Installer
+GenericName=OSInstaller
+GenericName[zh_CN]=StartOS 安装工具
+GenericName[zh_TW]=StartOS 安裝工具
+GenericName[zh_HK]=StartOS 安裝工具
 Icon=osinstaller
+_Comment=Installer for installing StartOS

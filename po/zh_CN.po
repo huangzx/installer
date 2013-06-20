@@ -155,7 +155,7 @@ msgstr "StartOS 安装工具"
 
 #: ../data/osinstaller.desktop.in.in.h:2
 msgid "Installer for installing StartOS"
-msgstr "StartOS 安装工具"
+msgstr "安装 StartOS 到硬盘"
 
 #: ../data/parted_man.glade.h:1
 msgid "Advance"
