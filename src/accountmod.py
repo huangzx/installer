@@ -130,12 +130,12 @@ class AccountHost(GOBjectThreadMod):
         if not config.has_section('daemon'):
             config.add_section('daemon')
         
-        config.set('daemon','TimedLoginEnable','false')
+        #config.set('daemon','TimedLoginEnable','false')
         config.set('daemon','AutomaticLogin',self.username)
-        config.set('daemon','TimedLoginDelay','1000')
+        #config.set('daemon','TimedLoginDelay','1000')
         config.set('daemon','AutomaticLoginEnable','true')
-        config.set('daemon','TimedLogin',self.username)
-        config.set('daemon','DefaultSession','gnome')
+        #config.set('daemon','TimedLogin',self.username)
+        #config.set('daemon','DefaultSession','gnome')
 
         config.write2file(gdmf)
         return True

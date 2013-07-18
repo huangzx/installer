@@ -31,7 +31,7 @@ for dir in /etc/skel /home/"$INS_USERNAME"; do
 done
 
 
-# If found nomodeset in cmdline, add to grub default configfile
+# If found nomodeset|vga=788 in cmdline, add to grub default configfile
 # Found swap partition, add resume= to grub default configfile for hibernation
 GRUBCONFIG="$TARGETDIR"/etc/default/grub	
 FSTAB="$TARGETDIR"/etc/fstab
@@ -39,8 +39,8 @@ FSTAB="$TARGETDIR"/etc/fstab
 
 for ARG in $(cat /proc/cmdline); do
 	case "${ARG}" in
-		nomodeset) GRUB_CMDLINE_LINUX+=" nomodeset"
-	    		   break
+		nomodeset) GRUB_CMDLINE_LINUX+=" nomodeset" ;;
+		  vga=788) GRUB_CMDLINE_LINUX+=" vga=788"
 	esac
 done
 
